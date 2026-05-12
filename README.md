@@ -1,42 +1,42 @@
-# 🚴 NextBike — Real-Time Bike Sharing Platform
+#  NextBike — Real-Time Bike Sharing Platform
 
 > A full-stack bike-sharing demo built with **NestJS · React · Apache Kafka · Docker**.  
 > 15 simulated bikes move around Berlin in real time — GPS events stream through Kafka and the map updates in the browser via WebSocket with zero polling.
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
-### 🗺 Live Map
+###  Live Map
 ![Live Map](screenshots/live-map.png)
 
-### 🚴 Bike Panel
+###  Bike Panel
 ![Bike Panel](screenshots/bike-panel.png)
 
-### ⚡ Kafka Feed
+###  Kafka Feed
 ![Kafka Feed](screenshots/kafka-feed.png)
 
-### 📊 Kafka UI
+###  Kafka UI
 ![Kafka UI](screenshots/kafka-ui.png)
 
 > Drop your screenshots into the `screenshots/` folder using the exact filenames above, then push to update the README images.
 
 ---
 
-## ✨ Features
+##  Features
 
 | | Feature | Detail |
 |---|---|---|
-| 🗺 | **Live GPS map** | 15 bikes broadcast position every 3 s; map updates instantly |
-| 🚴 | **Ride management** | Start / end rides via REST API |
-| ⚡ | **Kafka event bus** | All events flow through dedicated topics |
-| 🔌 | **WebSocket push** | socket.io broadcasts updates to every connected browser |
-| 📊 | **Fleet stats** | Header shows total / in-use / available / low-battery counts |
-| 🛠 | **Kafka UI** | Browse raw messages and consumer lag at `localhost:8080` |
+|  | **Live GPS map** | 15 bikes broadcast position every 3 s; map updates instantly |
+|  | **Ride management** | Start / end rides via REST API |
+|  | **Kafka event bus** | All events flow through dedicated topics |
+|  | **WebSocket push** | socket.io broadcasts updates to every connected browser |
+|  | **Fleet stats** | Header shows total / in-use / available / low-battery counts |
+|  | **Kafka UI** | Browse raw messages and consumer lag at `localhost:8080` |
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -71,7 +71,7 @@
 
 ---
 
-## 📦 Kafka Topics
+##  Kafka Topics
 
 | Topic | Producer | Consumer | Payload |
 |---|---|---|---|
@@ -82,7 +82,7 @@
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -98,19 +98,19 @@ make up
 # or: docker compose up -d --build
 ```
 
-> ⏱ First start takes ~2 min — Kafka needs to become healthy before the backend connects.
+>  First start takes ~2 min — Kafka needs to become healthy before the backend connects.
 
 ### 2 — Open in browser
 
 | Service | URL |
 |---|---|
-| 🌐 Frontend (React) | http://localhost:3000 |
-| 🔧 Backend API | http://localhost:3001/api/bikes |
-| 📊 Kafka UI | http://localhost:8080 |
+|  Frontend (React) | http://localhost:3000 |
+|  Backend API | http://localhost:3001/api/bikes |
+|  Kafka UI | http://localhost:8080 |
 
 ---
 
-## 🔌 REST API
+##  REST API
 
 ```
 GET  /api/bikes              → all bikes (position, status, battery)
@@ -155,7 +155,7 @@ POST /api/rides/:rideId/end                       →  end a ride
 
 ---
 
-## ⚡ WebSocket Events
+##  WebSocket Events
 
 Connect to `ws://localhost:3001` using socket.io:
 
@@ -171,7 +171,7 @@ socket.on('clients_count',  (n)     => { /* connected browser count */ });
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 nextbike/
@@ -209,7 +209,7 @@ nextbike/
 
 ---
 
-## 🧠 Data Flow
+##  Data Flow
 
 ```
 BikeSimulatorService  (@Interval every 3 s)
@@ -234,7 +234,7 @@ React — useSocket hook
 
 ---
 
-## 🗺 Berlin Stations (Seed Data)
+##  Berlin Stations (Seed Data)
 
 | ID | Name | Lat | Lon | Capacity |
 |---|---|---|---|---|
@@ -248,7 +248,7 @@ Bikes 1–10 start as `available` at stations. Bikes 11–15 start as `in_use` a
 
 ---
 
-## 🛠 Dev Commands
+##  Dev Commands
 
 ```bash
 make up                    # Build & start full stack (detached)
@@ -265,7 +265,7 @@ make status                # Show container health at a glance
 
 ---
 
-## 📊 Kafka UI
+##  Kafka UI
 
 Visit **http://localhost:8080** to:
 
@@ -276,7 +276,7 @@ Visit **http://localhost:8080** to:
 
 ---
 
-## ⚠️ Known Constraints
+##  Known Constraints
 
 | Constraint | Detail |
 |---|---|
