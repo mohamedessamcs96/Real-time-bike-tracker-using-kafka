@@ -5,6 +5,24 @@
 
 ---
 
+## 📸 Screenshots
+
+### 🗺 Live Map
+![Live Map](screenshots/live-map.png)
+
+### 🚴 Bike Panel
+![Bike Panel](screenshots/bike-panel.png)
+
+### ⚡ Kafka Feed
+![Kafka Feed](screenshots/kafka-feed.png)
+
+### 📊 Kafka UI
+![Kafka UI](screenshots/kafka-ui.png)
+
+> Drop your screenshots into the `screenshots/` folder using the exact filenames above, then push to update the README images.
+
+---
+
 ## ✨ Features
 
 | | Feature | Detail |
